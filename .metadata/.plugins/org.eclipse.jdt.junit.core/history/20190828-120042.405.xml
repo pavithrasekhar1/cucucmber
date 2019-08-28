@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="Cucumber" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.stepdefenition.TestRunner" time="0.001">
+    <testsuite name="Feature: Add Customer functionality" time="0.001">
+      <testcase name="add customer with valid data" classname="Add Customer functionality" time="0.001">
+        <skipped>cucumber.runtime.junit.SkippedThrowable: This scenario is skipped&#13;
+&#13;
+</skipped>
+      </testcase>
+      <testcase name="add customer with one dimensinal list" classname="Add Customer functionality" time="0.0">
+        <skipped>cucumber.runtime.junit.SkippedThrowable: This scenario is skipped&#13;
+&#13;
+</skipped>
+      </testcase>
+      <testcase name="add customer with one dimensinal map" classname="Add Customer functionality" time="0.0">
+        <skipped>cucumber.runtime.junit.SkippedThrowable: This scenario is skipped&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

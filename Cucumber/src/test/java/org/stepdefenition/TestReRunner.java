@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features= "@src/test/resources/failed.txt",
-                 glue= "org.stepdefenition")
+                 glue= "org.stepdefenition",dryRun=false)
 public class TestReRunner {
 	
 

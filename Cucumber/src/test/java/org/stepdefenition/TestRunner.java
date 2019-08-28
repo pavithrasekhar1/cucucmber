@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
                  glue= {"org.stepdefenition"},
                  plugin= {"html:target","rerun:src/test/resources/failed.txt"},
                  monochrome=true,
-                 dryRun=false)
+                 dryRun=true)
                  
                  
 

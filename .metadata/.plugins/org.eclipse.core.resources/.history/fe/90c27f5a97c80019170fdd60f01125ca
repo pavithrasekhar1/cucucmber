@@ -1,0 +1,39 @@
+package com.fb.stepdefenition;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class LoginPageSteps1 {
+	WebDriver driver;
+	@Given("User is on facebook page")
+	public void user_is_on_facebook_page() { 
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\admin\\eclipse-workspace\\Cucumber\\driver\\chromedriver.exe");
+	   driver=new ChromeDriver(); 
+	   driver.get("https://www.facebook.com/");
+	   driver.manage().window().maximize();
+	
+	}
+
+	@When("^User enters the deatils$")
+	public void user_enters_the_deatils(DataTable data){
+		List<String>e=data.asList();
+		driver.findElement(By.id("email")).sendKeys(e.get(0));
+		driver.findElement(By.id("pass")).sendKeys(e.get(1));
+	}
+	
+
+	@Then("^Verify url contains login_attempt$")
+	public void verify_url_contains_login_attempt() {
+	}
+
+
+
+}

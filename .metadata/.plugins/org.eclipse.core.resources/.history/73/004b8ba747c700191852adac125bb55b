@@ -1,0 +1,49 @@
+package org.stepdefenition;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AddCustomer {
+	static WebDriver driver;
+	@Given("User can Launch the browser")
+	public void user_can_Launch_the_browser()  {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Downloads\\eclipse-committers-2019-03-R-win32-x86_64\\eclipse\\May30\\cucumberframework\\driver\\chromedriver.exe");
+		driver=new ChromeDriver();
+		System.out.println("Given");
+		driver.get("http://demo.guru99.com/telecom/");
+	}
+
+	@When("User click the Addcustomer details")
+	public void user_click_the_Addcustomer_details()  {
+		driver.findElement(By.xpath("(//a[text()='Add Customer'])[1]")).click();
+	    
+	}
+
+	@And("User enter valid details")
+	public void user_enter_valid_details()  {
+		driver.findElement(By.xpath("//label[text()='Done']")).click();
+		driver.findElement(By.id("fname")).sendKeys("Pavi");
+		driver.findElement(By.id("lname")).sendKeys("sekhar");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("pavi@gmail.com");
+		driver.findElement(By.xpath("//textarea[@id='message']")).sendKeys("chennai");
+		driver.findElement(By.xpath("//input[@id='telephoneno']")).sendKeys("4453776587");
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+	}
+
+	@Then("I validate the outcomes")
+	public void i_validate_the_outcomes(){
+		Assert.assertTrue(driver.findElement(By.xpath("(//td[@align='center'])[2]")).isDisplayed());
+	    
+	}
+
+
+}
+
+	

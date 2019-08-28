@@ -6643,3 +6643,7 @@ Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@539b1ae9
 Stack Trace
 	at java.lang.Object.wait(Native Method)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+
+!ENTRY org.eclipse.ui.monitoring 2 0 2019-08-28 14:38:51.275
+!MESSAGE UI freeze of 0.58s at 14:38:50.691
+(no stack samples were collected because the monitoring thread starved for CPU)
